@@ -1,4 +1,4 @@
-﻿using MediaToolkit;
+using MediaToolkit;
 using MediaToolkit.Model;
 using System;
 using System.Collections.Generic;
@@ -13,12 +13,12 @@ namespace ytdownload
     {
         static void Main(string[] args)
         {
-            var allVideos = File.ReadAllLines("./music.txt").ToHashSet();
+            var allVideos = File.ReadAllLines("../../music.txt").ToHashSet();
 
             var originalVideos = allVideos.Distinct().ToHashSet();
             Console.WriteLine($"{originalVideos.Count} unique songs");
 
-            var source = @"./music/";
+            var source = @"../../music/";
 
             if (Directory.Exists(source))
             {
